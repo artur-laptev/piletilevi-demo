@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+const PAGE_URL = 'https://piletilevi.netlify.app/';
+
 test.describe('discounts page', () => {
 
   test.describe('add discount', () => {
@@ -8,7 +10,7 @@ test.describe('discounts page', () => {
     test.beforeAll(async ({ browser }) => {
       page = await browser.newPage();
 
-      await page.goto('/');
+      await page.goto(PAGE_URL);
     });
 
     test.afterAll(async () => {
@@ -47,7 +49,7 @@ test.describe('discounts page', () => {
     test.beforeAll(async ({ browser }) => {
       page = await browser.newPage();
 
-      await page.goto('/');
+      await page.goto(PAGE_URL);
     });
 
     test.afterAll(async () => {
