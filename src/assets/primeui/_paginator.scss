@@ -1,0 +1,28 @@
+.p-paginator {
+  @apply flex items-center justify-center flex-wrap py-2 px-4 rounded-md gap-1
+    bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-surface-0;
+
+    &-content {
+      @apply flex items-center justify-center flex-wrap gap-[23px]
+    }
+
+    &-prev,
+    &-next {
+      @apply cursor-pointer inline-flex items-center justify-center leading-none overflow-hidden relative
+        bg-white transition-colors duration-200 rounded-md p-[7px]
+        border border-gray enabled:hover:bg-gray/15 enabled:active:bg-gray/30
+        enabled:hover:border-gray/90 enabled:active:border-gray/90;
+    }
+
+    &-page {
+      @apply text-[#3C00E5] text-lg leading-4 p-1;
+
+      &-selected {
+        @apply text-[#1A1A1A] font-medium border-b-2;
+      }
+    }
+
+    &-pages {
+      @apply flex items-center gap-4;
+    }
+}

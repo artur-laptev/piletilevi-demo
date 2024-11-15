@@ -1,0 +1,83 @@
+.p-multiselect {
+  @apply inline-flex cursor-pointer relative select-none rounded-md
+    bg-white border border-gray
+}
+
+.p-multiselect-dropdown {
+  @apply flex items-center justify-center shrink-0 bg-transparent
+    text-surface-500 dark:text-surface-400 w-10 rounded-r-md
+}
+
+.p-multiselect-label-container {
+  @apply overflow-hidden flex-auto
+}
+
+.p-multiselect-label {
+  @apply flex items-center gap-1 whitespace-nowrap overflow-hidden text-ellipsis px-2.5 py-[11px] text-sm leading-4
+}
+
+.p-multiselect-label.p-placeholder {
+  @apply text-secondary;
+}
+
+.p-multiselect-label-empty {
+  @apply overflow-hidden opacity-0
+}
+
+.p-multiselect .p-multiselect-overlay {
+  @apply min-w-full
+}
+
+.p-multiselect-overlay {
+  @apply absolute rounded-md bg-white shadow-[0_4px_21px_-5px_rgba(0,0,0,0.25)]
+}
+
+.p-multiselect-header {
+  @apply flex items-center py-3 px-2 relative;
+
+  &:hover {
+    @apply bg-[#EAE9EF];
+  }
+
+  // workaround for all select label
+  .p-checkbox {
+    width: 100%;
+  }
+
+  .p-checkbox-input {
+    opacity: 1;
+
+    &::after {
+      position: absolute;
+      content: 'Select all';
+      top: -3px;
+      left: 27px;
+      cursor: pointer;
+    }
+
+    &:checked::after {
+      content: 'Deselect all';
+    }
+  }
+}
+
+.p-multiselect-filter-container {
+  @apply flex-auto
+}
+
+.p-multiselect-filter {
+  @apply w-full
+}
+
+.p-multiselect-list-container {
+  @apply overflow-auto
+}
+
+.p-multiselect-list {
+  @apply list-none flex flex-col
+}
+
+.p-multiselect-option {
+  @apply cursor-pointer font-normal whitespace-nowrap relative overflow-hidden flex items-center gap-2 px-2 py-3
+    rounded-md transition-colors duration-200 hover:bg-[#EAE9EF];
+}

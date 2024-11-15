@@ -1,0 +1,33 @@
+.p-button {
+  $self: &;
+
+  @apply inline-flex cursor-pointer select-none items-center justify-center relative
+    bg-primary enabled:hover:brightness-125 enabled:active:brightness-150 text-white
+    border border-y-2 border-primary enabled:hover:border-primary enabled:active:border-primary
+    focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
+    px-5 py-2 transition-colors duration-200 rounded-md text-nowrap text-sm
+    disabled:cursor-default;
+
+    &-label {
+      @apply font-medium;
+    }
+
+    &-outlined {
+      @apply bg-transparent enabled:hover:bg-primary/5 enabled:active:bg-primary/15
+        border-primary enabled:hover:border-primary/90 enabled:active:border-primary/90 border-2
+        text-primary enabled:hover:text-primary enabled:active:text-primary
+        enabled:hover:brightness-100 enabled:active:brightness-100;
+
+      &#{$self}-secondary {
+        @apply border-gray enabled:hover:bg-gray/15 enabled:active:bg-gray/30
+          enabled:hover:border-gray/90 enabled:active:border-gray/90
+      }
+    }
+
+    &-text {
+      @apply bg-transparent enabled:hover:bg-secondary/5 enabled:active:bg-secondary/15
+        border-transparent enabled:hover:border-transparent enabled:active:border-transparent
+        text-secondary enabled:hover:text-secondary enabled:active:text-secondary
+        px-3;
+    }
+}

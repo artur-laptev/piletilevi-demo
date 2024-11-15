@@ -1,0 +1,6 @@
+.p-inputtext {
+  @apply appearance-none rounded-md border border-gray
+    bg-white placeholder:text-secondary
+    text-sm leading-4
+    px-2.5 py-[11px] outline-none;
+}

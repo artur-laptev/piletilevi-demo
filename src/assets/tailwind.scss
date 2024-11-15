@@ -1,0 +1,14 @@
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use './primeui/index.scss';
+@use 'tailwindcss/utilities';
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}

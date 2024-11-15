@@ -1,0 +1,43 @@
+.p-datatable {
+    @apply relative;
+
+    &-table {
+      @apply w-full;
+
+      &-container {
+        @apply bg-white border border-[#EAE9EF] rounded-md shadow-pl px-5 py-7;
+      }
+    }
+
+    &-column {
+      &-header-content {
+        @apply text-sm leading-4;
+      }
+    }
+
+    &-header-cell {
+      @apply text-left py-1 px-2 border-b border-gray;
+    }
+
+    &-tbody {
+      & > tr {
+        & > td {
+          @apply p-2 border-b border-gray text-left text-sm leading-4;
+
+          vertical-align: top;
+        }
+      }
+    }
+
+    &-hoverable &-tbody > tr:hover {
+      @apply cursor-pointer !bg-[#EAE9EF];
+    }
+
+    &-striped &-tbody > tr.p-row-odd {
+      @apply bg-[#F5F5F7];
+    }
+
+    &-paginator-bottom {
+      @apply py-9;
+    }
+}

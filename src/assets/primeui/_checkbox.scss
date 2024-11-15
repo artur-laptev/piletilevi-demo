@@ -1,0 +1,32 @@
+.p-checkbox {
+  @apply relative inline-flex select-none w-5 h-5;
+
+  &-input {
+    @apply cursor-pointer disabled:cursor-default appearance-none
+      absolute left-0 top-0 w-full h-full m-0 p-0 opacity-0 z-10
+      border border-transparent rounded-sm;
+  }
+
+  &-box {
+    @apply flex justify-center items-center rounded-sm w-5 h-5
+      border border-gray transition-colors duration-200;
+  }
+
+  &-icon {
+    @apply text-sm w-[0.875rem] h-[0.875rem] transition-colors duration-200;
+  }
+
+  &-checked & {
+    &-box {
+      @apply border-primary bg-primary;
+    }
+
+    &-icon {
+      @apply text-white;
+    }
+  }
+
+  &:not(.p-disabled):has(&-input:focus-visible) &-box {
+    @apply outline outline-1 outline-offset-2 outline-primary;
+  }
+}
